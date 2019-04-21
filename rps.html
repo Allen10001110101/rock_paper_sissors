@@ -2,9 +2,26 @@
   <Html>
     <head>
       <h1>Rock Paper Sissors</h1>
-    </head>
+    </head> 
     <body>
       <script>
+         var urPlay = prompt("Do you choose rock, paper or scissors?"); // maybe this is how to get it to return
+          function comPlay() {
+            var x = math.random();  //if this doesnt work, I will fix in debug
+            if (x < 0.34) {
+             com = ("Rock")
+          } else if (x < 0.67) { // I feel like ive missed something because im googling more than coding
+             com = ("Paper")
+          } else {
+             com = ("Sissors")
+          } 
+          return(com)    //where the hell does this return to?
+          }
+          function compair(urPlay, comPlay()) { // jumbled code needs work
+            if
+            else (urPlay === comPlay)
+            alert("Its a tie!")
+          }
       </script>
     </body>
-  </Html>
+  </Html>  
