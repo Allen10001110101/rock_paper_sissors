@@ -2,26 +2,29 @@
   <Html>
     <head>
       <h1>Rock Paper Sissors</h1>
-    </head> 
+    </head>
     <body>
       <script>
-         var urPlay = prompt("Do you choose rock, paper or scissors?"); // maybe this is how to get it to return
-          function comPlay() {
-            var x = math.random();  //if this doesnt work, I will fix in debug
-            if (x < 0.34) {
-             com = ("Rock")
-          } else if (x < 0.67) { // I feel like ive missed something because im googling more than coding
-             com = ("Paper")
-          } else {
-             com = ("Sissors")
-          } 
-          return(com)    //where the hell does this return to?
+          function comp() {                        // computer play response
+            num = Math.floor(Math.random() * 3);   // it works now and returns values
+            if (num == 1) {
+              num = "Rock"
+            }
+            else if (num == 2) {
+              num = "Paper"
+            }
+            else {
+              num = "Sissors"
+            }
+            return window.num
           }
-          function compair(urPlay, comPlay()) { // jumbled code needs work
-            if
-            else (urPlay === comPlay)
-            alert("Its a tie!")
+          function hum() {
+            hum = prompt("Do you choose rock, paper or scissors?");
+            if ()
+            var x = ("computer plays " + comp() + ". human plays " + hum + "." )
+            return x
           }
+          
       </script>
     </body>
-  </Html>  
+  </Html>
