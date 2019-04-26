@@ -18,13 +18,34 @@
             }
             return window.num
           }
-          function hum() {
-            hum = prompt("Do you choose rock, paper or scissors?");
-            if ()
-            var x = ("computer plays " + comp() + ". human plays " + hum + "." )
-            return x
+          function humn() {
+            var hum = prompt("Do you choose rock, paper or scissors?");   // sets string to first capital rest lower case 
+            var hum = hum.toLowerCase();                                  // so we can check for absloute equal strings
+            var hum = hum.charAt(0).toUpperCase() + hum.slice(1);
+            if (hum == ("")) {
+              alert("You must enter a number!!")
+            }
+            return hum
           }
-          
+          function test() {
+            if (comp() == humn()) {
+               var y = ("It looks like its a tie!")        // this funtion will compair our funtions to check for a winner
+      //      } else if (comp() == "Rock" && humn() == "Paper") {
+      //         var y = ("Your paper beats Rock!")
+      //      } else if (comp() == "Rock" && humn() == "Sissors") {
+      //         var y = ("Rock beats your Sissors!")
+      //      } else if (comp() == "Paper" && humn() == "Sissors") {
+      //         var y = ("Your sissors beats paper!")
+      //      } else if (comp() == "Paper" && humn() == "Rock") {
+      //        var y = ("Paper beats your Rock!")
+      //      } else if (comp() == "Sissors" && humn() == "Paper") {
+      //        var y = ("Sissors beats your Paper!")
+      //      } else (comp() == "Sissors" && humn() == "rock") {
+      //         var y = ("Your Rock beats Sissors!")
+      //      }                                      // ill make this more complex once i get it functionin
+            //var x = ("computer plays " + comp() + ". human plays " + humn() + "." )
+             } return y//, x
+          }
       </script>
     </body>
   </Html>
