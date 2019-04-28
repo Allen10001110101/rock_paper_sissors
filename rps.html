@@ -59,8 +59,10 @@
             return scr
           }
           function round() {
-            while (cp < 5 && hp < 5) {                                  // houses stop condition when round 5 is reached 
-             console.log(test());                                       // also shows round results and current score
+            while (cp < 5 && hp < 5) { 
+             //return test();                                           // houses stop condition when round 5 is reached 
+             console.log(test());       
+             //return score();                                          // also shows round results and current score
              console.log(score());
             }
             return test(), score()
@@ -69,10 +71,13 @@
             while (cp < 4 && hp < 4) {
               round()
             } if (cp >= 5) {
-              console.log("The computer won!")
+              //return ("The computer won!");
+              console.log("The computer won!");
             } else if (hp >= 5) {
-              console.log("YOU WON!!!!!!!!!!!!111!!!11!!11!!!11!")
-              console.log(score())
+              //return ("YOU WON!!!!!!!!!!!!111!!!11!!11!!!11!");
+              console.log("YOU WON!!!!!!!!!!!!111!!!11!!11!!!11!");
+              //return score();
+              console.log(score());
             }
           }
       </script>
