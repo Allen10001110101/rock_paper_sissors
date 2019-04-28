@@ -5,6 +5,8 @@
     </head>
     <body>
       <script>
+        var hp = 0
+        var cp = 0
           function comp() {                        // computer play response
             num = Math.floor(Math.random() * 3);   // it works now and returns values
             if (num == 1) {
@@ -28,23 +30,50 @@
             return hum
           }
           function test() {
-            if (comp() == humn()) {
-               var y = ("It looks like its a tie!")        // this funtion will compair our funtions to check for a winner
-      //      } else if (comp() == "Rock" && humn() == "Paper") {
-      //         var y = ("Your paper beats Rock!")
-      //      } else if (comp() == "Rock" && humn() == "Sissors") {
-      //         var y = ("Rock beats your Sissors!")
-      //      } else if (comp() == "Paper" && humn() == "Sissors") {
-      //         var y = ("Your sissors beats paper!")
-      //      } else if (comp() == "Paper" && humn() == "Rock") {
-      //        var y = ("Paper beats your Rock!")
-      //      } else if (comp() == "Sissors" && humn() == "Paper") {
-      //        var y = ("Sissors beats your Paper!")
-      //      } else (comp() == "Sissors" && humn() == "rock") {
-      //         var y = ("Your Rock beats Sissors!")
-      //      }                                      // ill make this more complex once i get it functionin
-            //var x = ("computer plays " + comp() + ". human plays " + humn() + "." )
-             } return y//, x
+            var ev = comp()
+            var gd = humn()
+            if (ev == gd) {
+              var y = ("It looks like its a tie!");        // this funtion will compair our funtions to check for a winner
+            } else if (ev == "Rock" && gd == "Paper") {
+              var y = ("Your paper beats Rock!");
+              hp++;
+            } else if (ev == "Rock" && gd == "Sissors") {
+              var y = ("Rock beats your Sissors!");
+              cp++;
+            } else if (ev == "Paper" && gd == "Sissors") {
+              var y = ("Your Sissors beats Paper!");
+              hp++;
+            } else if (ev == "Paper" && gd == "Rock") {
+              var y = ("Paper beats your Rock!");
+              cp++;
+            } else if (ev == "Sissors" && gd == "Paper") {
+              var y = ("Sissors beats your Paper!");
+              cp++;
+            } else if (ev == "Sissors" && gd == "Rock") {
+              var y = ("Your Rock beats Sissors!");
+              hp++;
+             } return y
+          }
+          function score() {
+            var scr = ("The Score is: Computer " + cp + " human player: " + hp + "");
+            return scr
+          }
+          function round() {
+            while (cp < 5 && hp < 5) {
+             console.log(test());
+             console.log(score());
+            }
+            return test(), score()
+          }
+          function play() {
+            while (cp < 4 && hp < 4) {
+              round()
+            } if (cp >= 5) {
+              console.log("The computer won!")
+            } else if (hp >= 5) {
+              console.log("YOU WON!!!!!!!!!!!!111!!!11!!11!!!11!")
+              console.log(score())
+            }
           }
       </script>
     </body>
