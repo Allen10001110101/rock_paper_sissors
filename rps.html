@@ -55,17 +55,17 @@
              } return y
           }
           function score() {
-            var scr = ("The Score is: Computer " + cp + " human player: " + hp + "");
+            var scr = ("The Score is: Computer " + cp + " human player: " + hp + "");  // funtions keeps track of score
             return scr
           }
           function round() {
-            while (cp < 5 && hp < 5) {
-             console.log(test());
+            while (cp < 5 && hp < 5) {                                  // houses stop condition when round 5 is reached 
+             console.log(test());                                       // also shows round results and current score
              console.log(score());
             }
             return test(), score()
           }
-          function play() {
+          function play() {                                            // plays game and houses the "win" "lose" conditions
             while (cp < 4 && hp < 4) {
               round()
             } if (cp >= 5) {
