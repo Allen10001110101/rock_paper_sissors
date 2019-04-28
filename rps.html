@@ -1,12 +1,12 @@
 
   <Html>
     <head>
-      <h1>Rock Paper Sissors</h1>
+      <h1>Rock Paper Scissors</h1>
     </head>
     <body>
       <script>
-        var hp = 0
-        var cp = 0
+        var hp = 0   // human player
+        var cp = 0   // computer player
           function comp() {                        // computer play response
             num = Math.floor(Math.random() * 3);   // it works now and returns values
             if (num == 1) {
@@ -16,12 +16,12 @@
               num = "Paper"
             }
             else {
-              num = "Sissors"
+              num = "Scissors"
             }
             return window.num
           }
           function humn() {
-            var hum = prompt("Do you choose rock, paper or scissors?");   // sets string to first capital rest lower case 
+            var hum = prompt("Do you choose rock, paper or Scissors?");   // sets string to first capital rest lower case 
             var hum = hum.toLowerCase();                                  // so we can check for absloute equal strings
             var hum = hum.charAt(0).toUpperCase() + hum.slice(1);
             if (hum == ("")) {
@@ -30,27 +30,27 @@
             return hum
           }
           function test() {
-            var ev = comp()
-            var gd = humn()
-            if (ev == gd) {
+            var computer = comp()
+            var human = humn()
+            if (computer == human) {
               var y = ("It looks like its a tie!");        // this funtion will compair our funtions to check for a winner
-            } else if (ev == "Rock" && gd == "Paper") {
+            } else if (computer == "Rock" && human == "Paper") {
               var y = ("Your paper beats Rock!");
               hp++;
-            } else if (ev == "Rock" && gd == "Sissors") {
-              var y = ("Rock beats your Sissors!");
+            } else if (computer == "Rock" && human == "Scissors") {
+              var y = ("Rock beats your Scissors!");
               cp++;
-            } else if (ev == "Paper" && gd == "Sissors") {
-              var y = ("Your Sissors beats Paper!");
+            } else if (computer == "Paper" && human == "Scissors") {
+              var y = ("Your Scissors beats Paper!");
               hp++;
-            } else if (ev == "Paper" && gd == "Rock") {
+            } else if (computer == "Paper" && human == "Rock") {
               var y = ("Paper beats your Rock!");
               cp++;
-            } else if (ev == "Sissors" && gd == "Paper") {
-              var y = ("Sissors beats your Paper!");
+            } else if (computer == "Scissors" && human == "Paper") {
+              var y = ("Scissors beats your Paper!");
               cp++;
-            } else if (ev == "Sissors" && gd == "Rock") {
-              var y = ("Your Rock beats Sissors!");
+            } else if (computer == "Scissors" && human == "Rock") {
+              var y = ("Your Rock beats Scissors!");
               hp++;
              } return y
           }
